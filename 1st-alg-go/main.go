@@ -30,6 +30,7 @@ func main() {
 			indexes = append(indexes, i+1)
 		}
 	}
+
 	indexes = append(indexes, 0)
 	copy(indexes[1:], indexes)
 	indexes[0] = 0
