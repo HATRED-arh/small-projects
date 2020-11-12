@@ -24,7 +24,10 @@ int main()
     indexes.push_back(words.size());
 
     for (int i = 0; i < indexes.size() - 1; i++)
-        std::cout << words.at(indexes.at(i)) << " " << indexes.at(i + 1) - indexes.at(i) << "\n";
+        std::cout << "Word " << words.at(indexes.at(i))
+                  << " repeats " << indexes.at(i + 1) - indexes.at(i)
+                  << (indexes.at(i + 1) - indexes.at(i) == 1 ? " time" : " times")
+                  << "\n";
 
     return EXIT_SUCCESS;
 }
