@@ -16,8 +16,9 @@ int main()
         else
             amount.at(str)++;
 
-    for (auto &t : amount)
-        std::cout << t.first << " - " << t.second << std::endl;
+    for (const std::pair<const std::string, const int> &point : amount)
+        std::cout << "Word \"" << point.first << "\" repeats " << point.second
+                  << (point.second == 1 ? " time" : " times") << std::endl;
 
     return EXIT_SUCCESS;
 }

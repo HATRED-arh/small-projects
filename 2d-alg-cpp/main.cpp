@@ -5,10 +5,10 @@
 #include <algorithm>
 
 std::vector<std::string> words;
+std::vector<int> indexes;
 
 int main()
 {
-    std::vector<int> indexes;
     std::ifstream file("words.txt");
     std::string str;
     while (std::getline(file, str))
