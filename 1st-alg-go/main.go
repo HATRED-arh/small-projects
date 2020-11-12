@@ -36,6 +36,14 @@ func main() {
 	indexes[0] = 0
 	indexes = append(indexes, len(words))
 	for i := 0; i < len(indexes)-1; i++ {
-		fmt.Printf("Word \"%s\" repeats %d times \n", words[indexes[i]], indexes[i+1]-indexes[i])
+		fmt.Printf("Word \"%s\" repeats %d %s \n", words[indexes[i]], indexes[i+1]-indexes[i], corrector(indexes[i+1]-indexes[i]))
+	}
+}
+
+func corrector(quantity int) string {
+	if quantity == 1 {
+		return "time"
+	} else {
+		return "times"
 	}
 }
